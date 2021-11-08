@@ -1,4 +1,4 @@
-package fr.esgi.poo;
+package fr.esgi.quentinrouville;
 
 import static org.junit.Assert.assertTrue;
 
