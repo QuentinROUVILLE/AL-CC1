@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.domain.model;
+package fr.esgi.quentinrouville.common.domain.model;
 
 import java.util.Objects;
 
