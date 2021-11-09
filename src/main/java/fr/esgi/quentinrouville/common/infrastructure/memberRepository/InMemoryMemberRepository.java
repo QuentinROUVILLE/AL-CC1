@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.common.infrastructure;
+package fr.esgi.quentinrouville.common.infrastructure.memberRepository;
 
 import fr.esgi.quentinrouville.common.domain.model.Member;
 import fr.esgi.quentinrouville.common.domain.model.MemberId;
