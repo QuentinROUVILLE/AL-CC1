@@ -12,7 +12,7 @@ public class ApplyMemberTest {
     public void CreateAMember() {
         RegisterService registerService = new RegisterService();
         InMemoryMemberRepository inMemoryMemberRepository = InMemoryMemberRepository.getInstance();
-        Member newMember = registerService.register("Quentin", "ROUVILLE", "password");
+        Member newMember = registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "password");
 
         assertEquals(inMemoryMemberRepository.byId(newMember.getMemberId()), newMember);
     }
