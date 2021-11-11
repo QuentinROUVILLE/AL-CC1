@@ -2,15 +2,14 @@ package fr.esgi.quentinrouville.applyMemberModule;
 
 import fr.esgi.quentinrouville.common.domain.model.Member;
 import fr.esgi.quentinrouville.common.domain.model.MemberId;
-import fr.esgi.quentinrouville.common.domain.repository.MemberRepository;
-import fr.esgi.quentinrouville.common.infrastructure.memberRepository.InMemoryMemberRepository;
+import fr.esgi.quentinrouville.common.domain.services.MemberService;
 
 public final class RegisterService {
     public Member register(String firstName, String lastName, String email, String password) {
-        MemberRepository inMemoryMemberRepository = InMemoryMemberRepository.getInstance();
-        final MemberId memberId = inMemoryMemberRepository.nextIdentity();
+        MemberService memberService = new MemberService();
+        final MemberId memberId = memberService.nextIdentity();
         Member member = Member.of(memberId, lastName, firstName, email, password);
-        inMemoryMemberRepository.save(member);
+        memberService.create(member);
 
         return member;
     }
