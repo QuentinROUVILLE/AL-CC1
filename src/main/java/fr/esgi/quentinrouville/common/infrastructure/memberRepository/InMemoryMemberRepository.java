@@ -12,8 +12,20 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public final class InMemoryMemberRepository implements MemberRepository
 {
+    private static InMemoryMemberRepository instance;
     private final AtomicInteger counter = new AtomicInteger(0);
     private final Map<MemberId, Member> data = new ConcurrentHashMap<>();
+
+    private InMemoryMemberRepository() {
+        // do nothing
+    }
+
+    public static InMemoryMemberRepository getInstance() {
+        if (isInstanceNotInitialized()) {
+            instance = new InMemoryMemberRepository();
+        }
+        return instance;
+    }
 
     @Override
     public void save(Member member) {
@@ -37,5 +49,9 @@ public final class InMemoryMemberRepository implements MemberRepository
     @Override
     public List<Member> findAll() {
         return new ArrayList<>(data.values());
+    }
+
+    private static boolean isInstanceNotInitialized() {
+        return instance == null;
     }
 }
