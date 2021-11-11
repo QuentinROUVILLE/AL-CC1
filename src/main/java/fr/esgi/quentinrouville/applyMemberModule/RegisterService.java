@@ -9,7 +9,7 @@ public final class RegisterService {
     public Member register(String firstName, String lastName, String password) {
         MemberRepository inMemoryMemberRepository = InMemoryMemberRepository.getInstance();
         final MemberId memberId = inMemoryMemberRepository.nextIdentity();
-        Member member = Member.of(memberId, "ROUVILLE", "Quentin", "password");
+        Member member = Member.of(memberId, lastName, firstName, password);
         inMemoryMemberRepository.save(member);
 
         return member;
