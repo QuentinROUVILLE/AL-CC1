@@ -18,6 +18,6 @@ public final class MemberId
 
     @Override
     public String toString() {
-        return Integer.toString(value);
+        return String.valueOf(value);
     }
 }
