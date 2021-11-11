@@ -15,4 +15,9 @@ public final class MemberId
     public String getValue() {
         return String.valueOf(value);
     }
+
+    @Override
+    public String toString() {
+        return Integer.toString(value);
+    }
 }

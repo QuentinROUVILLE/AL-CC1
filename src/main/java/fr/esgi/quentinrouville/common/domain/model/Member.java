@@ -28,4 +28,15 @@ public class Member {
     public void changePassword(String newPassword) {
         this.password = Objects.requireNonNull(newPassword);
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "memberId=" + memberId +
+                ", lastname='" + lastname + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
