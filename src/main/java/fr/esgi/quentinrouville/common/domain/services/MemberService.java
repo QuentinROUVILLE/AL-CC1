@@ -33,7 +33,7 @@ public final class MemberService {
         return this.memberRepository.byId(MemberId);
     }
 
-    public List<Member> all() {
+    public List<Member> findAll() {
         return this.memberRepository.findAll();
     }
 }
