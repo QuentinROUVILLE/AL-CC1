@@ -29,12 +29,6 @@ public final class MemberService {
         return this.memberRepository.nextIdentity();
     }
 
-    public void changePassword(MemberId memberId, String newPassword) {
-        var member = this.memberRepository.byId(memberId);
-        member.changePassword(newPassword);
-        this.memberRepository.save(member);
-    }
-
     public Member byId(MemberId MemberId) {
         return this.memberRepository.byId(MemberId);
     }

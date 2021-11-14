@@ -25,10 +25,6 @@ public class Member {
         return memberId;
     }
 
-    public void changePassword(String newPassword) {
-        this.password = Objects.requireNonNull(newPassword);
-    }
-
     @Override
     public String toString() {
         return "Member{" +
