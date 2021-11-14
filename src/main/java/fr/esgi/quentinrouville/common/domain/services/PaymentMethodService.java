@@ -6,8 +6,7 @@ import fr.esgi.quentinrouville.common.domain.model.MemberId;
 public class PaymentMethodService
 {
     private static final MemberService memberService = new MemberService();
-
-    public boolean ApprovePayment(MemberId memberId, double amount) {
+    public boolean ProcessPayment(MemberId memberId, double amount) {
         Member member = memberService.findById(memberId);
         if(member.getPaymentMethod() != null){
             return member.getPaymentMethod().PayAmount(amount);

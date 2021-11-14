@@ -20,7 +20,7 @@ public class ProcessPaymentTest
 
         System.out.println(member);
 
-        assertFalse(paymentMethodService.ApprovePayment(member.getMemberId(), 39.99));
+        assertFalse(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
     }
     @Test
     public void ShouldReturnTrueWhenAMemberHaveRegisterAPaymentMethod()
@@ -29,6 +29,6 @@ public class ProcessPaymentTest
 
         member.setPaymentMethod(new CreditCardPayment("1234567890123456", "19/01", "123", "M REMY"));
 
-        assertTrue(paymentMethodService.ApprovePayment(member.getMemberId(), 39.99));
+        assertTrue(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
     }
 }
