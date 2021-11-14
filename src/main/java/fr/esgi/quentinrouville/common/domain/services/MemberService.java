@@ -16,7 +16,10 @@ public final class MemberService {
     }
 
     public void create(Member member) {
-        this.memberRepository.save(member);
+        VerifyMemberService verifyMemberService = new VerifyMemberService();
+        if(verifyMemberService.isValid(member)) {
+            this.memberRepository.save(member);
+        }
     }
 
     public MemberId nextIdentity(){
