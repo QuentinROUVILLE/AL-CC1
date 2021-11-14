@@ -20,6 +20,9 @@ public final class MemberService {
         if(verifyMemberService.isValid(member)) {
             this.memberRepository.save(member);
         }
+        else {
+            throw new IllegalArgumentException("Member is not valid");
+        }
     }
 
     public MemberId nextIdentity(){
