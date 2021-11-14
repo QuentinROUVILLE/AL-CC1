@@ -34,6 +34,7 @@ public class Member {
                 ", firstname='" + firstname + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", paymentMethod='" + paymentMethod + '\'' +
                 '}';
     }
 
