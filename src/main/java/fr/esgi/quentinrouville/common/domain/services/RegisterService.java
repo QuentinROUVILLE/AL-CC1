@@ -1,8 +1,7 @@
-package fr.esgi.quentinrouville.applyMemberModule;
+package fr.esgi.quentinrouville.common.domain.services;
 
 import fr.esgi.quentinrouville.common.domain.model.Member;
 import fr.esgi.quentinrouville.common.domain.model.MemberId;
-import fr.esgi.quentinrouville.common.domain.services.MemberService;
 
 public final class RegisterService {
     public Member register(String firstName, String lastName, String email, String password) {

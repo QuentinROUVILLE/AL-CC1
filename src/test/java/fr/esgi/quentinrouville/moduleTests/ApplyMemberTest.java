@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville.moduleTests;
 
-import fr.esgi.quentinrouville.applyMemberModule.RegisterService;
+import fr.esgi.quentinrouville.common.domain.services.RegisterService;
 import fr.esgi.quentinrouville.common.domain.model.Member;
 import fr.esgi.quentinrouville.common.domain.services.MemberService;
 import org.junit.Test;

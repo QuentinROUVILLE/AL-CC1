@@ -39,4 +39,8 @@ public class Member {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+    public String getEmail() {
+        return email;
+    }
 }
