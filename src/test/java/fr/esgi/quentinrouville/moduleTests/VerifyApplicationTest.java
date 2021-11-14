@@ -16,7 +16,7 @@ public class VerifyApplicationTest
 
     @BeforeClass
     public static void init() {
-        registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "password");
+        registerService.register("Quentin", "ROUVILLE", "qrouville@gmail.com", "password");
     }
 
     @Test
@@ -25,7 +25,7 @@ public class VerifyApplicationTest
     }
     @Test
     public void ShouldReturnTrueWhenTheUserEmailIsAlreadyOnTheStorage() {
-        assertTrue(verifyMemberService.emailIsAlreadyTaken("rouvilleq@gmail.com"));
+        assertTrue(verifyMemberService.emailIsAlreadyTaken("qrouville@gmail.com"));
     }
 
     @Test
