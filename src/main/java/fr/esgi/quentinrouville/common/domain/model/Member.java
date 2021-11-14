@@ -47,6 +47,6 @@ public class Member {
     }
 
     public void setPaymentMethod(PaymentMethod paymentMethod) {
-        this.paymentMethod = paymentMethod;
+        this.paymentMethod = Objects.requireNonNull(paymentMethod);
     }
 }
