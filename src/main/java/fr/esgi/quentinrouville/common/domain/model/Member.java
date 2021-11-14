@@ -7,7 +7,7 @@ public class Member {
     private final String lastname;
     private final String firstname;
     private final String email;
-    private String password;
+    private final String password;
 
     private Member(MemberId memberId, String lastname, String firstname, String email, String password) {
         this.memberId = Objects.requireNonNull(memberId);
