@@ -15,7 +15,7 @@ public class ApplyMemberTest {
     public void ShouldCreateAMemberIfAllParametersAreProvided() {
         Member newMember = registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "password");
 
-        assertEquals(memberService.byId(newMember.getMemberId()), newMember);
+        assertEquals(memberService.findById(newMember.getMemberId()), newMember);
     }
 
     @Test(expected = NullPointerException.class)

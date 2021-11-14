@@ -30,7 +30,7 @@ public final class InMemoryMemberRepository implements MemberRepository
     }
 
     @Override
-    public Member byId(MemberId memberId) {
+    public Member findById(MemberId memberId) {
         final Member member = data.get(memberId);
         if (member == null) {
             throw new RuntimeException("No member for " + memberId.getValue());

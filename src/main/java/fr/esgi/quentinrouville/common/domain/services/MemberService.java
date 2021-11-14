@@ -29,8 +29,8 @@ public final class MemberService {
         return this.memberRepository.nextIdentity();
     }
 
-    public Member byId(MemberId MemberId) {
-        return this.memberRepository.byId(MemberId);
+    public Member findById(MemberId MemberId) {
+        return this.memberRepository.findById(MemberId);
     }
 
     public List<Member> findAll() {
