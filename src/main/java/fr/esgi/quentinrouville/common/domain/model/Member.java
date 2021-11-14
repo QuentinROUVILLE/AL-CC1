@@ -8,6 +8,7 @@ public class Member {
     private final String firstname;
     private final String email;
     private final String password;
+    private PaymentMethod paymentMethod;
 
     private Member(MemberId memberId, String lastname, String firstname, String email, String password) {
         this.memberId = Objects.requireNonNull(memberId);
@@ -38,5 +39,13 @@ public class Member {
 
     public String getEmail() {
         return email;
+    }
+
+    public PaymentMethod getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 }
