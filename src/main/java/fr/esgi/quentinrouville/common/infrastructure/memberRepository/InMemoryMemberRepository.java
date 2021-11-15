@@ -16,11 +16,6 @@ public final class InMemoryMemberRepository implements MemberRepository
     private final AtomicInteger counter = new AtomicInteger(0);
     private final Map<MemberId, Member> data = new ConcurrentHashMap<>();
 
-    private InMemoryMemberRepository()
-    {
-        // do nothing
-    }
-
     public static InMemoryMemberRepository getInstance()
     {
         return INSTANCE;
