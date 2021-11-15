@@ -6,18 +6,21 @@ public class PayPalPayment implements PaymentMethod
 {
     private final String token;
 
-    public PayPalPayment(String token) {
+    public PayPalPayment(String token)
+    {
         this.token = token;
     }
 
     @Override
-    public boolean PayAmount(double Amount) {
+    public boolean PayAmount(double Amount)
+    {
         System.out.println("Paying " + Amount + "€ with " + this);
         return true;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "PayPal token : " + token;
     }
 }

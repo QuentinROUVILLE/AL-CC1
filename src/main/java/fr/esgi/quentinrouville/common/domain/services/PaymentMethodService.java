@@ -7,15 +7,22 @@ public class PaymentMethodService
 {
     private static final MemberService memberService = new MemberService();
 
-    public boolean ProcessPayment(MemberId memberId, double amount) {
+    public boolean ProcessPayment(MemberId memberId, double amount)
+    {
         Member member = memberService.findById(memberId);
-        if(member.getPaymentMethod() != null){
+
+        if(member.getPaymentMethod() != null)
+        {
+            ApproveTradesman();
+
             return member.getPaymentMethod().PayAmount(amount);
         }
+
         return false;
     }
 
-    public void ApproveTradesman(){
+    public void ApproveTradesman()
+    {
         System.out.println("Tradesman approve");
     }
 }

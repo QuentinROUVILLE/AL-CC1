@@ -18,7 +18,8 @@ public class CreditCardPayment implements PaymentMethod
     }
 
     @Override
-    public boolean PayAmount(double Amount) {
+    public boolean PayAmount(double Amount)
+    {
         System.out.println("Paying " + Amount + "€ with " + this);
         return true;
     }

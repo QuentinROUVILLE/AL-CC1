@@ -7,33 +7,41 @@ import fr.esgi.quentinrouville.common.infrastructure.memberRepository.InMemoryMe
 
 import java.util.List;
 
-public final class MemberService {
-
+public final class MemberService
+{
     private final MemberRepository memberRepository;
 
-    public MemberService() {
+    public MemberService()
+    {
         this.memberRepository = InMemoryMemberRepository.getInstance();
     }
 
-    public void create(Member member) {
+    public void create(Member member)
+    {
         VerifyMemberService verifyMemberService = new VerifyMemberService();
-        if(verifyMemberService.isValid(member)) {
+
+        if(verifyMemberService.isValid(member))
+        {
             this.memberRepository.save(member);
         }
-        else {
+        else
+        {
             throw new IllegalArgumentException("Member is not valid");
         }
     }
 
-    public MemberId nextIdentity(){
+    public MemberId nextIdentity()
+    {
         return this.memberRepository.nextIdentity();
     }
 
-    public Member findById(MemberId MemberId) {
+    public Member findById(MemberId MemberId)
+    {
         return this.memberRepository.findById(MemberId);
     }
 
-    public List<Member> findAll() {
+    public List<Member> findAll()
+    {
         return this.memberRepository.findAll();
     }
 }

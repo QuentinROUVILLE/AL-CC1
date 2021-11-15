@@ -16,35 +16,43 @@ public final class InMemoryMemberRepository implements MemberRepository
     private final AtomicInteger counter = new AtomicInteger(0);
     private final Map<MemberId, Member> data = new ConcurrentHashMap<>();
 
-    private InMemoryMemberRepository() {
+    private InMemoryMemberRepository()
+    {
         // do nothing
     }
 
-    public static InMemoryMemberRepository getInstance() {
+    public static InMemoryMemberRepository getInstance()
+    {
         return INSTANCE;
     }
 
     @Override
-    public void save(Member member) {
+    public void save(Member member)
+    {
         data.put(member.getMemberId(), member);
     }
 
     @Override
-    public Member findById(MemberId memberId) {
+    public Member findById(MemberId memberId)
+    {
         final Member member = data.get(memberId);
-        if (member == null) {
+
+        if (member == null)
+        {
             throw new RuntimeException("No member for " + memberId.getValue());
         }
         return member;
     }
 
     @Override
-    public MemberId nextIdentity() {
+    public MemberId nextIdentity()
+    {
         return MemberId.of(counter.incrementAndGet());
     }
 
     @Override
-    public List<Member> findAll() {
+    public List<Member> findAll()
+    {
         return new ArrayList<>(data.values());
     }
 }

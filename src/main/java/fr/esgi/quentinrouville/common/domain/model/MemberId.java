@@ -4,20 +4,24 @@ public final class MemberId
 {
     private final int value;
 
-    private MemberId (int value) {
+    private MemberId (int value)
+    {
         this.value = value;
     }
 
-    public static MemberId of(int value) {
+    public static MemberId of(int value)
+    {
         return new MemberId(value);
     }
 
-    public String getValue() {
+    public String getValue()
+    {
         return String.valueOf(value);
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return String.valueOf(value);
     }
 }

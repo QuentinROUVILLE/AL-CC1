@@ -5,7 +5,8 @@ import fr.esgi.quentinrouville.common.domain.model.Member;
 
 import java.util.List;
 
-public interface MemberRepository {
+public interface MemberRepository
+{
     void save(Member member);
 
     Member findById(MemberId memberId);

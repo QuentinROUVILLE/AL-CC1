@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.moduleTests;
+package fr.esgi.quentinrouville;
 
 import fr.esgi.quentinrouville.common.domain.model.Member;
 import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
@@ -22,6 +22,7 @@ public class ProcessPaymentTest
 
         assertFalse(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
     }
+
     @Test
     public void ShouldReturnTrueWhenAMemberHaveRegisterAPaymentMethod()
     {
