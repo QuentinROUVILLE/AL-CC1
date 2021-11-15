@@ -3,7 +3,7 @@ package fr.esgi.quentinrouville.common.domain.services;
 import fr.esgi.quentinrouville.common.domain.model.Member;
 import fr.esgi.quentinrouville.common.domain.model.MemberId;
 
-public class PaymentMethodService
+public final class PaymentMethodService
 {
     private static final MemberService memberService = new MemberService();
 

@@ -2,7 +2,7 @@ package fr.esgi.quentinrouville.common.domain.services;
 
 import fr.esgi.quentinrouville.common.domain.model.Member;
 
-public class VerifyMemberService
+public final class VerifyMemberService
 {
     private final MemberService memberService = new MemberService();
 

@@ -2,7 +2,7 @@ package fr.esgi.quentinrouville.common.infrastructure.paymentMethod;
 
 import fr.esgi.quentinrouville.common.domain.model.PaymentMethod;
 
-public class CreditCardPayment implements PaymentMethod
+public final class CreditCardPayment implements PaymentMethod
 {
     private final String cardNumber;
     private final String expirationDate;

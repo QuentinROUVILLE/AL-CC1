@@ -2,7 +2,7 @@ package fr.esgi.quentinrouville.common.infrastructure.paymentMethod;
 
 import fr.esgi.quentinrouville.common.domain.model.PaymentMethod;
 
-public class PayPalPayment implements PaymentMethod
+public final class PayPalPayment implements PaymentMethod
 {
     private final String token;
 
