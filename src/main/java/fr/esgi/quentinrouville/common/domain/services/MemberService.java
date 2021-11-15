@@ -17,6 +17,8 @@ public final class MemberService
 
         if(verifyMemberService.isValid(member))
         {
+            System.out.println("The member " + member.getFirstName() + " " + member.getLastName() + " has been created.");
+
             this.memberRepository.save(member);
         }
         else

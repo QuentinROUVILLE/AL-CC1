@@ -57,4 +57,12 @@ public class Member
     {
         this.paymentMethod = Objects.requireNonNull(paymentMethod);
     }
+
+    public String getFirstName() {
+        return firstname;
+    }
+
+    public String getLastName() {
+        return lastname;
+    }
 }
