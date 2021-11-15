@@ -18,9 +18,7 @@ public final class CreditCardPayment implements PaymentMethod
     }
 
     @Override
-    public boolean PayAmount(double Amount)
-    {
-        System.out.println("Paying " + Amount + "€ with " + this);
+    public boolean PaymentIsValid() {
         return true;
     }
 
