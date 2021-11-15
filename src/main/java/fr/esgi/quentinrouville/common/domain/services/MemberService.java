@@ -9,12 +9,7 @@ import java.util.List;
 
 public final class MemberService
 {
-    private final MemberRepository memberRepository;
-
-    public MemberService()
-    {
-        this.memberRepository = InMemoryMemberRepository.getInstance();
-    }
+    private final MemberRepository memberRepository = InMemoryMemberRepository.getInstance();
 
     public void create(Member member)
     {
