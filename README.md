@@ -17,4 +17,4 @@ Pour ce projet j'ai adopté l'architecture suivante pour les packages Java :
 ![arborescence](doc_files/arborescence.png "arborescence")
 # Liens utiles
 
-[Le github du projet](https://github.com/QuentinROUVILLE/AL-CC1)
+[Le GitHub du projet](https://github.com/QuentinROUVILLE/AL-CC1)
