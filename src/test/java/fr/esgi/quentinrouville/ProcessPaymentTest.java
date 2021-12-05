@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ProcessPaymentTest
+public final class ProcessPaymentTest
 {
     private final RegisterService registerService = new RegisterService();
     private final PaymentMethodService paymentMethodService = new PaymentMethodService();

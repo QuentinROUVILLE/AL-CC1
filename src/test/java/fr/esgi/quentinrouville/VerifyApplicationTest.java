@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class VerifyApplicationTest
+public final class VerifyApplicationTest
 {
     private final static RegisterService registerService = new RegisterService();
     private final VerifyMemberService verifyMemberService = new VerifyMemberService();

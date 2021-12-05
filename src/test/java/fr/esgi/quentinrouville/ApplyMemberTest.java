@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ApplyMemberTest
+public final class ApplyMemberTest
 {
     private final MemberService memberService = new MemberService();
     private final RegisterService registerService = new RegisterService();

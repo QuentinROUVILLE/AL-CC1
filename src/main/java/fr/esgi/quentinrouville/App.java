@@ -5,7 +5,7 @@ import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.CreditCardPayment;
 
-public class App
+public final class App
 {
     public static void main( String[] args )
     {

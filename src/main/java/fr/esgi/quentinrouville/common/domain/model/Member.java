@@ -2,7 +2,7 @@ package fr.esgi.quentinrouville.common.domain.model;
 
 import java.util.Objects;
 
-public class Member
+public final class Member
 {
     private final MemberId memberId;
     private final String lastname;
