@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville;
+package fr.esgi.quentinrouville.modules;
 
 import fr.esgi.quentinrouville.common.domain.services.MemberService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
