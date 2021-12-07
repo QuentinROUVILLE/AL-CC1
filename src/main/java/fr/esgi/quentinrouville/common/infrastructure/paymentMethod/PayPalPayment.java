@@ -6,9 +6,14 @@ public final class PayPalPayment implements PaymentMethod
 {
     private final String token;
 
-    public PayPalPayment(String token)
+    private PayPalPayment(String token)
     {
         this.token = token;
+    }
+
+    public static PayPalPayment of(String token)
+    {
+        return new PayPalPayment(token);
     }
 
     @Override
