@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville.modules;
 
-import fr.esgi.quentinrouville.common.domain.model.Member;
+import fr.esgi.quentinrouville.common.domain.model.member.Member;
 import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.CreditCardPayment;

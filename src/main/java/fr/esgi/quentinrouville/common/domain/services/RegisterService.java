@@ -1,7 +1,7 @@
 package fr.esgi.quentinrouville.common.domain.services;
 
-import fr.esgi.quentinrouville.common.domain.model.Member;
-import fr.esgi.quentinrouville.common.domain.model.MemberId;
+import fr.esgi.quentinrouville.common.domain.model.member.Member;
+import fr.esgi.quentinrouville.common.domain.model.member.MemberId;
 
 public final class RegisterService
 {

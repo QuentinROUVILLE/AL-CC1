@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville.common.domain.services;
 
-import fr.esgi.quentinrouville.common.domain.model.Member;
+import fr.esgi.quentinrouville.common.domain.model.member.Member;
 
 public final class VerifyMemberService
 {

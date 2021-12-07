@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.common.domain.model;
+package fr.esgi.quentinrouville.common.domain.model.member;
 
 public final class MemberId
 {

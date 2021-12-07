@@ -1,7 +1,7 @@
 package fr.esgi.quentinrouville.common.infrastructure.memberRepository;
 
-import fr.esgi.quentinrouville.common.domain.model.Member;
-import fr.esgi.quentinrouville.common.domain.model.MemberId;
+import fr.esgi.quentinrouville.common.domain.model.member.Member;
+import fr.esgi.quentinrouville.common.domain.model.member.MemberId;
 import fr.esgi.quentinrouville.common.domain.repository.MemberRepository;
 
 import java.util.ArrayList;
