@@ -23,7 +23,7 @@ public final class MemberService
         }
         else
         {
-            throw new IllegalArgumentException("Member is not valid");
+            throw new IllegalArgumentException("Member mustn't be null.");
         }
     }
 
