@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.models;
+package fr.esgi.quentinrouville.models.member;
 
 import fr.esgi.quentinrouville.common.domain.model.member.EmailAddress;
 import org.junit.Test;
