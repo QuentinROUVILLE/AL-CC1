@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.common.infrastructure.paymentMethod;
+package fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard;
 
 import fr.esgi.quentinrouville.common.domain.model.PaymentMethod;
 

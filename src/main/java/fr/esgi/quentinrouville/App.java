@@ -3,7 +3,7 @@ package fr.esgi.quentinrouville;
 import fr.esgi.quentinrouville.common.domain.model.member.Member;
 import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
-import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.CreditCardPayment;
+import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CreditCardPayment;
 
 public final class App
 {
