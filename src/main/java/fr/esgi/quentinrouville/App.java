@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville;
 
-import fr.esgi.quentinrouville.common.domain.model.Member;
+import fr.esgi.quentinrouville.common.domain.model.member.Member;
 import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.CreditCardPayment;
@@ -14,7 +14,7 @@ public final class App
 
         Member me = registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "password");
 
-        me.setPaymentMethod(new CreditCardPayment("1234567890123456", "11/21", "123", "M QUENTIN ROUVILLE"));
+        me.setPaymentMethod(CreditCardPayment.of("1234567890123456", "11/21", "123", "M QUENTIN ROUVILLE"));
 
         paymentMethodService.ProcessPayment(me.getMemberId(), 49.99);
     }
