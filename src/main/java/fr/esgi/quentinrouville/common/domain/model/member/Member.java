@@ -10,10 +10,10 @@ public final class Member
     private final String lastname;
     private final String firstname;
     private final EmailAddress email;
-    private final String password;
+    private final Password password;
     private PaymentMethod paymentMethod;
 
-    private Member(MemberId memberId, String lastname, String firstname, EmailAddress email, String password)
+    private Member(MemberId memberId, String lastname, String firstname, EmailAddress email, Password password)
     {
         this.memberId = Objects.requireNonNull(memberId);
         this.lastname = Objects.requireNonNull(lastname);
@@ -22,7 +22,7 @@ public final class Member
         this.password = Objects.requireNonNull(password);
     }
 
-    public static Member of(MemberId memberId, String lastname, String firstname, EmailAddress email, String password)
+    public static Member of(MemberId memberId, String lastname, String firstname, EmailAddress email, Password password)
     {
         return new Member(memberId, lastname, firstname, email, password);
     }
