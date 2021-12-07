@@ -4,7 +4,6 @@ import fr.esgi.quentinrouville.common.domain.model.member.EmailAddress;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 public final class EmailTest {
     @Test
@@ -15,7 +14,6 @@ public final class EmailTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testEmailWithWrongEmail() {
-        EmailAddress email = EmailAddress.of("rouvilleqgmail.com");
-        assertNull(email);
+        EmailAddress.of("rouvilleqgmail.com");
     }
 }
