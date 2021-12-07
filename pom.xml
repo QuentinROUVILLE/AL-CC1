@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>fr.esgi.poo</groupId>
-  <artifactId>CC1</artifactId>
+  <artifactId>TradeMe</artifactId>
   <version>1.0.0</version>
 
-  <name>CC1</name>
+  <name>TradeMe</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
