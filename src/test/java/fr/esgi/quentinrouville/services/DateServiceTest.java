@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 import static org.junit.Assert.*;
 
-public final class DateServiceTests {
+public final class DateServiceTest {
     DateService dateService = new DateService();
 
     @Test
