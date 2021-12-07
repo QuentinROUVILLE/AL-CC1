@@ -28,7 +28,7 @@ public final class ProcessPaymentTest
     {
         Member member = registerService.register("Remy", "MACHAVOINE", "rmach@myges.fr", "password");
 
-        member.setPaymentMethod(new CreditCardPayment("1234567890123456", "19/01", "123", "M REMY"));
+        member.setPaymentMethod(CreditCardPayment.of("1234567890123456", "19/01", "123", "M REMY"));
 
         assertTrue(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
     }
