@@ -3,6 +3,7 @@ package fr.esgi.quentinrouville.modules;
 import fr.esgi.quentinrouville.common.domain.model.member.Member;
 import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
+import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardNumber;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CreditCardPayment;
 import org.junit.Test;
 
@@ -28,7 +29,7 @@ public final class ProcessPaymentTest
     {
         Member member = registerService.register("Remy", "MACHAVOINE", "rmach@myges.fr", "Azerty123@");
 
-        member.setPaymentMethod(CreditCardPayment.of("1234567890123456", "19/01", "123", "M REMY"));
+        member.setPaymentMethod(CreditCardPayment.of(CardNumber.of("1234567890123456"), "19/01", "123", "M REMY"));
 
         assertTrue(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
     }

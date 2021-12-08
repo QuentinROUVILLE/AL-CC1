@@ -6,12 +6,12 @@ import java.util.Objects;
 
 public final class CreditCardPayment implements PaymentMethod
 {
-    private final String cardNumber;
+    private final CardNumber cardNumber;
     private final String expirationDate;
     private final String securityCode;
     private final String owner;
 
-    private CreditCardPayment(String cardNumber, String expirationDate, String securityCode, String owner)
+    private CreditCardPayment(CardNumber cardNumber, String expirationDate, String securityCode, String owner)
     {
         this.cardNumber = Objects.requireNonNull(cardNumber);
         this.expirationDate = Objects.requireNonNull(expirationDate);
@@ -19,7 +19,7 @@ public final class CreditCardPayment implements PaymentMethod
         this.owner = Objects.requireNonNull(owner);
     }
 
-    public static CreditCardPayment of(String cardNumber, String expirationDate, String securityCode, String owner)
+    public static CreditCardPayment of(CardNumber cardNumber, String expirationDate, String securityCode, String owner)
     {
         return new CreditCardPayment(cardNumber, expirationDate, securityCode, owner);
     }
