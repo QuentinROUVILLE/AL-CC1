@@ -17,7 +17,7 @@ public final class VerifyApplicationTest
     @BeforeClass
     public static void init()
     {
-        registerService.register("Quentin", "ROUVILLE", "qrouville@gmail.com", "password");
+        registerService.register("Quentin", "ROUVILLE", "qrouville@gmail.com", "Azerty@123");
     }
 
     @Test

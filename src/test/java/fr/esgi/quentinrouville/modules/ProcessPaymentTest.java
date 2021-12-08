@@ -16,7 +16,7 @@ public final class ProcessPaymentTest
     @Test
     public void ShouldReturnFalseWhenAMemberHaventRegisterAPaymentMethod()
     {
-        Member member = registerService.register("Quentin", "MOLERO", "qmolero@myges.fr", "password");
+        Member member = registerService.register("Quentin", "MOLERO", "qmolero@myges.fr", "Azerty123@");
 
         System.out.println(member);
 
@@ -26,7 +26,7 @@ public final class ProcessPaymentTest
     @Test
     public void ShouldReturnTrueWhenAMemberHaveRegisterAPaymentMethod()
     {
-        Member member = registerService.register("Remy", "MACHAVOINE", "rmach@myges.fr", "password");
+        Member member = registerService.register("Remy", "MACHAVOINE", "rmach@myges.fr", "Azerty123@");
 
         member.setPaymentMethod(CreditCardPayment.of("1234567890123456", "19/01", "123", "M REMY"));
 
