@@ -5,6 +5,7 @@ import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardExpirationDate;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardNumber;
+import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardSecurityCode;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CreditCardPayment;
 import org.junit.Test;
 
@@ -37,7 +38,7 @@ public final class ProcessPaymentTest
         member.setPaymentMethod(CreditCardPayment.of(
                 CardNumber.of("1234567890123456"),
                 CardExpirationDate.of(year, month),
-                "123",
+                CardSecurityCode.of("123"),
                 "M REMY"
         ));
 
