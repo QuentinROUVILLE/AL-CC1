@@ -3,9 +3,12 @@ package fr.esgi.quentinrouville.modules;
 import fr.esgi.quentinrouville.common.domain.model.member.Member;
 import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
 import fr.esgi.quentinrouville.common.domain.services.RegisterService;
+import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardExpirationDate;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardNumber;
 import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CreditCardPayment;
 import org.junit.Test;
+
+import java.util.Calendar;
 
 import static org.junit.Assert.*;
 
@@ -27,9 +30,16 @@ public final class ProcessPaymentTest
     @Test
     public void ShouldReturnTrueWhenAMemberHaveRegisterAPaymentMethod()
     {
-        Member member = registerService.register("Remy", "MACHAVOINE", "rmach@myges.fr", "Azerty123@");
+        final int year = Calendar.getInstance().get(Calendar.YEAR) + 1;
+        final int month = Calendar.getInstance().get(Calendar.MONTH);
+        final Member member = registerService.register("Remy", "MACHAVOINE", "rmach@myges.fr", "Azerty123@");
 
-        member.setPaymentMethod(CreditCardPayment.of(CardNumber.of("1234567890123456"), "19/01", "123", "M REMY"));
+        member.setPaymentMethod(CreditCardPayment.of(
+                CardNumber.of("1234567890123456"),
+                CardExpirationDate.of(year, month),
+                "123",
+                "M REMY"
+        ));
 
         assertTrue(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
     }
