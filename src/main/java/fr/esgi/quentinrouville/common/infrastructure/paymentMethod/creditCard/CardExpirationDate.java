@@ -3,6 +3,7 @@ package fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard;
 import fr.esgi.quentinrouville.common.domain.services.DateService;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public final class CardExpirationDate
 {
@@ -28,5 +29,18 @@ public final class CardExpirationDate
     @Override
     public String toString() {
         return expirationDate.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CardExpirationDate)) return false;
+        CardExpirationDate that = (CardExpirationDate) o;
+        return expirationDate.equals(that.expirationDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(expirationDate);
     }
 }
