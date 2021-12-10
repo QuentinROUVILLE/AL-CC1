@@ -20,7 +20,7 @@ public final class ProcessPaymentTest
     @Test
     public void ShouldReturnFalseWhenAMemberHaventRegisterAPaymentMethod()
     {
-        Member member = registerService.register("Quentin", "MOLERO", "qmolero@myges.fr", "Azerty123@");
+        final Member member = registerService.register("Quentin", "MOLERO", "qmolero@myges.fr", "Azerty123@");
 
         System.out.println(member);
 

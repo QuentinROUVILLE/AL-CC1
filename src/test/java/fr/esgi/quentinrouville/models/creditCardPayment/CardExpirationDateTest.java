@@ -14,7 +14,7 @@ public class CardExpirationDateTest {
         final int year = Calendar.getInstance().get(Calendar.YEAR) + 1;
         final int month = Calendar.getInstance().get(Calendar.MONTH);
 
-        CardExpirationDate cardExpirationDate = CardExpirationDate.of(year, month);
+        final CardExpirationDate cardExpirationDate = CardExpirationDate.of(year, month);
         assertEquals(cardExpirationDate.toString(), LocalDate.of(year, month, 1).toString());
     }
     @Test(expected = IllegalArgumentException.class)

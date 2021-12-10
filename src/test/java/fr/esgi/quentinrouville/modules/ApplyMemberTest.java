@@ -15,7 +15,7 @@ public final class ApplyMemberTest
     @Test
     public void ShouldCreateAMemberIfAllParametersAreProvided()
     {
-        Member newMember = registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "Azerty123@");
+        final Member newMember = registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "Azerty123@");
 
         assertEquals(memberService.findById(newMember.getMemberId()), newMember);
     }

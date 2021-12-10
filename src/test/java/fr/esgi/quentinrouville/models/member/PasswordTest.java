@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public final class PasswordTest {
     @Test
     public void testPassword() {
-        Password password = Password.of("Azerty123@");
+        final Password password = Password.of("Azerty123@");
         assertEquals(password.toString(), "Azerty123@");
     }
 

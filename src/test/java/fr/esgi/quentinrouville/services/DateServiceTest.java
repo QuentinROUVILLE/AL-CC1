@@ -8,7 +8,7 @@ import java.util.Calendar;
 import static org.junit.Assert.*;
 
 public final class DateServiceTest {
-    DateService dateService = new DateService();
+    final DateService dateService = new DateService();
 
     @Test
     public void testGetCurrentDate() {

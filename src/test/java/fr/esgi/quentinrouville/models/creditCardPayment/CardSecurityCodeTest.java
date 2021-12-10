@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class CardSecurityCodeTest {
     @Test
     public void testCardSecurityCode() {
-        CardSecurityCode cardSecurityCode = CardSecurityCode.of("123");
+        final CardSecurityCode cardSecurityCode = CardSecurityCode.of("123");
         assertEquals("123", cardSecurityCode.toString());
     }
     @Test(expected = IllegalArgumentException.class)
