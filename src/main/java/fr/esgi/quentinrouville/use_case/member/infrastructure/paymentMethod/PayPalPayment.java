@@ -1,6 +1,6 @@
-package fr.esgi.quentinrouville.common.infrastructure.paymentMethod;
+package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod;
 
-import fr.esgi.quentinrouville.common.domain.model.PaymentMethod;
+import fr.esgi.quentinrouville.use_case.member.domain.model.PaymentMethod;
 
 public final class PayPalPayment implements PaymentMethod
 {

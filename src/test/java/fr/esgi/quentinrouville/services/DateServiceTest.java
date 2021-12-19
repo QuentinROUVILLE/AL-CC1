@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville.services;
 
-import fr.esgi.quentinrouville.common.domain.services.DateService;
+import fr.esgi.quentinrouville.use_case.member.application.DateService;
 import org.junit.Test;
 import java.time.LocalDate;
 import java.util.Calendar;

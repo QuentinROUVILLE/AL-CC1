@@ -1,6 +1,6 @@
-package fr.esgi.quentinrouville.common.domain.model.member;
+package fr.esgi.quentinrouville.use_case.member.domain.model;
 
-import fr.esgi.quentinrouville.common.domain.services.VerifyMemberService;
+import fr.esgi.quentinrouville.use_case.member.application.VerifyMemberService;
 
 import java.util.Objects;
 

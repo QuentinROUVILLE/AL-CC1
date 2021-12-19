@@ -1,8 +1,9 @@
-package fr.esgi.quentinrouville.common.domain.model.member;
+package fr.esgi.quentinrouville.use_case.member.domain.model;
 
 import java.util.Objects;
 
-public final class Password {
+public final class Password
+{
     private final String password;
 
     private Password(String password) {

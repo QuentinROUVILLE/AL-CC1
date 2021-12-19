@@ -1,7 +1,7 @@
-package fr.esgi.quentinrouville.common.domain.services;
+package fr.esgi.quentinrouville.use_case.member.application;
 
-import fr.esgi.quentinrouville.common.domain.model.member.Member;
-import fr.esgi.quentinrouville.common.domain.model.member.MemberId;
+import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
+import fr.esgi.quentinrouville.use_case.member.domain.model.MemberId;
 
 public final class PaymentMethodService
 {
