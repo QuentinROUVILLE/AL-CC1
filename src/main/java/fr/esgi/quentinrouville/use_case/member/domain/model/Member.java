@@ -1,6 +1,4 @@
-package fr.esgi.quentinrouville.common.domain.model.member;
-
-import fr.esgi.quentinrouville.common.domain.model.PaymentMethod;
+package fr.esgi.quentinrouville.use_case.member.domain.model;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville.models.creditCardPayment;
 
-import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardExpirationDate;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardExpirationDate;
 import org.junit.Test;
 
 import java.time.LocalDate;

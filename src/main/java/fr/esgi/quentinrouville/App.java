@@ -1,12 +1,12 @@
 package fr.esgi.quentinrouville;
 
-import fr.esgi.quentinrouville.common.domain.model.member.Member;
-import fr.esgi.quentinrouville.common.domain.services.PaymentMethodService;
-import fr.esgi.quentinrouville.common.domain.services.RegisterService;
-import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardExpirationDate;
-import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardNumber;
-import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CardSecurityCode;
-import fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard.CreditCardPayment;
+import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
+import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
+import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardExpirationDate;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardNumber;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardSecurityCode;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CreditCardPayment;
 
 public final class App
 {

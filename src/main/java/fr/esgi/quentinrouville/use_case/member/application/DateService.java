@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.common.domain.services;
+package fr.esgi.quentinrouville.use_case.member.application;
 
 import java.time.LocalDate;
 import java.util.Calendar;

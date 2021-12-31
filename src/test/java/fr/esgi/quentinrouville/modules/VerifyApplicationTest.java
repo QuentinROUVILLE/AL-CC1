@@ -1,8 +1,8 @@
 package fr.esgi.quentinrouville.modules;
 
-import fr.esgi.quentinrouville.common.domain.services.MemberService;
-import fr.esgi.quentinrouville.common.domain.services.RegisterService;
-import fr.esgi.quentinrouville.common.domain.services.VerifyMemberService;
+import fr.esgi.quentinrouville.use_case.member.application.MemberService;
+import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
+import fr.esgi.quentinrouville.use_case.member.application.VerifyMemberService;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

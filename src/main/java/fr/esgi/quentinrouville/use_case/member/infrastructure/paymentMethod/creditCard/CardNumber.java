@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.common.infrastructure.paymentMethod.creditCard;
+package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
 
 import java.util.Objects;
 

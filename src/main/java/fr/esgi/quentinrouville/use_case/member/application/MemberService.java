@@ -1,9 +1,9 @@
-package fr.esgi.quentinrouville.common.domain.services;
+package fr.esgi.quentinrouville.use_case.member.application;
 
-import fr.esgi.quentinrouville.common.domain.model.member.MemberId;
-import fr.esgi.quentinrouville.common.domain.repository.MemberRepository;
-import fr.esgi.quentinrouville.common.domain.model.member.Member;
-import fr.esgi.quentinrouville.common.infrastructure.memberRepository.InMemoryMemberRepository;
+import fr.esgi.quentinrouville.use_case.member.domain.model.MemberId;
+import fr.esgi.quentinrouville.use_case.member.domain.repository.MemberRepository;
+import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.memberRepository.InMemoryMemberRepository;
 
 import java.util.List;
 
