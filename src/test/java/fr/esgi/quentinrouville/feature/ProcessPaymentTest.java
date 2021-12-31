@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.modules;
+package fr.esgi.quentinrouville.feature;
 
 import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
 import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
