@@ -17,7 +17,7 @@ public final class PayPalPayment implements PaymentMethod
     }
 
     @Override
-    public boolean PaymentIsValid() {
+    public boolean paymentIsValid() {
         return true;
     }
 

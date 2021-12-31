@@ -7,7 +7,7 @@ public final class Password
     private final String password;
 
     private Password(String password) {
-        if(!PasswordIsValid(password)) {
+        if(!passwordIsValid(password)) {
             throw new IllegalArgumentException("Password is not valid");
         }
         this.password = password;
@@ -17,7 +17,7 @@ public final class Password
         return new Password(password);
     }
 
-    private boolean PasswordIsValid(String password) {
+    private boolean passwordIsValid(String password) {
         return password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
     }
 

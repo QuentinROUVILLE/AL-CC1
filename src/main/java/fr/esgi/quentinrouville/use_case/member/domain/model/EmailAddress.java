@@ -11,7 +11,7 @@ public final class EmailAddress
     private final VerifyMemberService verifyMemberService = new VerifyMemberService();
 
     private EmailAddress(String email) {
-        if(!EmailIsValid(email)) {
+        if(!emailIsValid(email)) {
             throw new IllegalArgumentException("Invalid email address");
         }
         this.email = email;
@@ -21,7 +21,7 @@ public final class EmailAddress
         return new EmailAddress(email);
     }
 
-    public boolean EmailIsValid(String email) {
+    public boolean emailIsValid(String email) {
         return email.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
                 && !verifyMemberService.emailIsAlreadyTaken(email);
     }

@@ -25,7 +25,7 @@ public final class CreditCardPayment implements PaymentMethod
     }
 
     @Override
-    public boolean PaymentIsValid() {
+    public boolean paymentIsValid() {
         return true;
     }
 

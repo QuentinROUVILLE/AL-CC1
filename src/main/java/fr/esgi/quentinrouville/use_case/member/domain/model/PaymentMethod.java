@@ -2,9 +2,9 @@ package fr.esgi.quentinrouville.use_case.member.domain.model;
 
 public interface PaymentMethod
 {
-    default boolean PayAmount(double Amount)
+    default boolean payAmount(double Amount)
     {
-        if(PaymentIsValid())
+        if(paymentIsValid())
         {
             System.out.println("Paying " + Amount + "€ with " + this);
 
@@ -17,5 +17,5 @@ public interface PaymentMethod
         }
     }
 
-    boolean PaymentIsValid();
+    boolean paymentIsValid();
 }

@@ -25,7 +25,7 @@ public final class ProcessPaymentTest
 
         System.out.println(member);
 
-        assertFalse(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
+        assertFalse(paymentMethodService.processPayment(member.getMemberId(), 39.99));
     }
 
     @Test
@@ -42,6 +42,6 @@ public final class ProcessPaymentTest
                 "M REMY"
         ));
 
-        assertTrue(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
+        assertTrue(paymentMethodService.processPayment(member.getMemberId(), 39.99));
     }
 }

@@ -24,6 +24,6 @@ public final class App
                 "M QUENTIN ROUVILLE"
         ));
 
-        paymentMethodService.ProcessPayment(me.getMemberId(), 49.99);
+        paymentMethodService.processPayment(me.getMemberId(), 49.99);
     }
 }
