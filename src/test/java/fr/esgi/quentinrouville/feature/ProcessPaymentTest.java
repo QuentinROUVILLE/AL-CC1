@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville.feature;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
+import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
 import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
 import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardExpirationDate;

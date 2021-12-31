@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.domain.model;
+package fr.esgi.quentinrouville.use_case.member.domain;
 
 import fr.esgi.quentinrouville.use_case.member.application.VerifyMemberService;
 

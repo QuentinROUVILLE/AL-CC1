@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.domain.model;
+package fr.esgi.quentinrouville.use_case.member.domain;
 
 public interface PaymentMethod
 {

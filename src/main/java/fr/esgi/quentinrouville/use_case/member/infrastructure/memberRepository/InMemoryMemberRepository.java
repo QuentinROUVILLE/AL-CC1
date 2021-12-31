@@ -1,8 +1,8 @@
 package fr.esgi.quentinrouville.use_case.member.infrastructure.memberRepository;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
-import fr.esgi.quentinrouville.use_case.member.domain.model.MemberId;
-import fr.esgi.quentinrouville.use_case.member.domain.repository.MemberRepository;
+import fr.esgi.quentinrouville.use_case.member.domain.Member;
+import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
+import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
 
 import java.util.ArrayList;
 import java.util.List;
