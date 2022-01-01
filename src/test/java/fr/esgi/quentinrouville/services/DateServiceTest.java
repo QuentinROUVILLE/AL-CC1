@@ -35,19 +35,19 @@ public final class DateServiceTest {
 
     @Test
     public void testIsMonthAndYearInTheFutureWhenTheDateIsInTheFuture() {
-        assertTrue(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.YEAR) + 1));
+        assertTrue(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH) + 1, Calendar.getInstance().get(Calendar.YEAR) + 1));
     }
     @Test
     public void testIsMonthAndYearInTheFutureWhenTheDateIsInThePast() {
-        assertFalse(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.YEAR) - 1));
+        assertFalse(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH) + 1, Calendar.getInstance().get(Calendar.YEAR) - 1));
     }
 
     @Test
     public void testIsMonthAndYearInTheFutureWhenTheDateIsInTheFutureWithTwoDigitYear() {
-        assertTrue(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH), (Calendar.getInstance().get(Calendar.YEAR) + 1) % 100));
+        assertTrue(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH) + 1, (Calendar.getInstance().get(Calendar.YEAR) + 1) % 100));
     }
     @Test
     public void testIsMonthAndYearInTheFutureWhenTheDateIsInThePastWithTwoDigitYear() {
-        assertFalse(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH), (Calendar.getInstance().get(Calendar.YEAR) - 1) % 100));
+        assertFalse(dateService.isMonthAndYearInTheFuture(Calendar.getInstance().get(Calendar.MONTH) + 1, (Calendar.getInstance().get(Calendar.YEAR) - 1) % 100));
     }
 }

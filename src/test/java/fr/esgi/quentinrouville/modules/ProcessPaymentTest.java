@@ -32,7 +32,7 @@ public final class ProcessPaymentTest
     public void ShouldReturnTrueWhenAMemberHaveRegisterAPaymentMethod()
     {
         final int year = Calendar.getInstance().get(Calendar.YEAR) + 1;
-        final int month = Calendar.getInstance().get(Calendar.MONTH);
+        final int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
         final Member member = registerService.register("Remy", "MACHAVOINE", "rmach@myges.fr", "Azerty123@");
 
         member.setPaymentMethod(CreditCardPayment.of(
