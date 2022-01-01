@@ -7,10 +7,9 @@ import static org.junit.Assert.assertEquals;
 
 public final class EmailTest {
     @Test
-    public void testEmail()
-    {
-        final EmailAddress email = EmailAddress.of("rouvilleq@gmail.com");
-        assertEquals(email.toString(), "rouvilleq@gmail.com");
+    public void testEmail() {
+        final EmailAddress email = EmailAddress.of("qrouville@gmail.com");
+        assertEquals(email.toString(), "qrouville@gmail.com");
     }
 
     @Test(expected = IllegalArgumentException.class)
