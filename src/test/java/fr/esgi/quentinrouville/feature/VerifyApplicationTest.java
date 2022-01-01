@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.modules;
+package fr.esgi.quentinrouville.feature;
 
 import fr.esgi.quentinrouville.use_case.member.application.MemberService;
 import fr.esgi.quentinrouville.use_case.member.application.RegisterService;

@@ -1,12 +1,12 @@
-package fr.esgi.quentinrouville.modules;
+package fr.esgi.quentinrouville.feature;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
+import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
 import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardExpirationDate;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardNumber;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardSecurityCode;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CreditCardPayment;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CardExpirationDate;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CardNumber;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CardSecurityCode;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CreditCardPayment;
 import org.junit.Test;
 
 import java.util.Calendar;
@@ -25,7 +25,7 @@ public final class ProcessPaymentTest
 
         System.out.println(member);
 
-        assertFalse(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
+        assertFalse(paymentMethodService.processPayment(member.getMemberId(), 39.99));
     }
 
     @Test
@@ -42,6 +42,6 @@ public final class ProcessPaymentTest
                 "M REMY"
         ));
 
-        assertTrue(paymentMethodService.ProcessPayment(member.getMemberId(), 39.99));
+        assertTrue(paymentMethodService.processPayment(member.getMemberId(), 39.99));
     }
 }

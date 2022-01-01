@@ -1,12 +1,12 @@
 package fr.esgi.quentinrouville;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
+import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
 import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardExpirationDate;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardNumber;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardSecurityCode;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CreditCardPayment;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CardExpirationDate;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CardNumber;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CardSecurityCode;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CreditCardPayment;
 
 public final class App
 {
@@ -24,6 +24,6 @@ public final class App
                 "M QUENTIN ROUVILLE"
         ));
 
-        paymentMethodService.ProcessPayment(me.getMemberId(), 49.99);
+        paymentMethodService.processPayment(me.getMemberId(), 49.99);
     }
 }

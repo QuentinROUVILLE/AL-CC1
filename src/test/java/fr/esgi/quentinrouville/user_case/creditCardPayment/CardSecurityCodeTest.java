@@ -1,6 +1,6 @@
-package fr.esgi.quentinrouville.models.creditCardPayment;
+package fr.esgi.quentinrouville.user_case.creditCardPayment;
 
-import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardSecurityCode;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.CardSecurityCode;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

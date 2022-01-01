@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
+package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ public final class CardNumber
 
     private CardNumber(String number)
     {
-        if(!NumberIsValid(number)){
+        if(!numberIsValid(number)){
             throw new IllegalArgumentException("Invalid card number");
         }
         this.number = number;
@@ -19,7 +19,7 @@ public final class CardNumber
         return new CardNumber(number);
     }
 
-    public boolean NumberIsValid(String number)
+    public boolean numberIsValid(String number)
     {
         return number.matches("^[0-9]{16}$");
     }

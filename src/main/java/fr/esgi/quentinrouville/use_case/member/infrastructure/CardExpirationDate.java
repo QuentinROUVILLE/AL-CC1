@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
+package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
 import fr.esgi.quentinrouville.use_case.member.application.DateService;
 
@@ -12,7 +12,7 @@ public final class CardExpirationDate
     private final DateService dateService = new DateService();
 
     private CardExpirationDate(LocalDate expirationDate) {
-        if(!ExpirationDateIsValid(expirationDate)) {
+        if(!expirationDateIsValid(expirationDate)) {
             throw new IllegalArgumentException("Expiration date is not valid");
         }
         this.expirationDate = expirationDate;
@@ -22,7 +22,7 @@ public final class CardExpirationDate
         return new CardExpirationDate(LocalDate.of(year, month, 1));
     }
 
-    private boolean ExpirationDateIsValid(LocalDate expirationDate) {
+    private boolean expirationDateIsValid(LocalDate expirationDate) {
         return dateService.isDateInTheFuture(expirationDate);
     }
 

@@ -1,6 +1,6 @@
-package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod;
+package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.PaymentMethod;
+import fr.esgi.quentinrouville.use_case.member.domain.PaymentMethod;
 
 public final class PayPalPayment implements PaymentMethod
 {
@@ -17,7 +17,7 @@ public final class PayPalPayment implements PaymentMethod
     }
 
     @Override
-    public boolean PaymentIsValid() {
+    public boolean paymentIsValid() {
         return true;
     }
 

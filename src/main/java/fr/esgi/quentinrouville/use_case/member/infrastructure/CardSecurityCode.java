@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
+package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
 import java.util.Objects;
 
@@ -6,7 +6,7 @@ public final class CardSecurityCode {
     private final String securityCode;
 
     private CardSecurityCode(String securityCode) {
-        if(!isValid(securityCode)) {
+        if(!securityCodeIsValid(securityCode)) {
             throw new IllegalArgumentException("Invalid security code");
         }
         this.securityCode = securityCode;
@@ -16,7 +16,7 @@ public final class CardSecurityCode {
         return new CardSecurityCode(securityCode);
     }
 
-    private boolean isValid(String securityCode) {
+    private boolean securityCodeIsValid(String securityCode) {
         return securityCode.matches("^[0-9]{3}$");
     }
 

@@ -1,6 +1,6 @@
-package fr.esgi.quentinrouville.models.member;
+package fr.esgi.quentinrouville.user_case.member;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.Password;
+import fr.esgi.quentinrouville.use_case.member.domain.Password;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

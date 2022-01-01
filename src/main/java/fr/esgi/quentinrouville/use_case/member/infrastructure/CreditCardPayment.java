@@ -1,6 +1,6 @@
-package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
+package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.PaymentMethod;
+import fr.esgi.quentinrouville.use_case.member.domain.PaymentMethod;
 
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class CreditCardPayment implements PaymentMethod
     }
 
     @Override
-    public boolean PaymentIsValid() {
+    public boolean paymentIsValid() {
         return true;
     }
 

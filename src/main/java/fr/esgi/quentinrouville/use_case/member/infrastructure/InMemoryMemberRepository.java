@@ -1,12 +1,13 @@
-package fr.esgi.quentinrouville.use_case.member.infrastructure.memberRepository;
+package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
-import fr.esgi.quentinrouville.use_case.member.domain.model.Member;
-import fr.esgi.quentinrouville.use_case.member.domain.model.MemberId;
-import fr.esgi.quentinrouville.use_case.member.domain.repository.MemberRepository;
+import fr.esgi.quentinrouville.use_case.member.domain.Member;
+import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
+import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,13 +29,13 @@ public final class InMemoryMemberRepository implements MemberRepository
     }
 
     @Override
-    public Member findById(MemberId memberId)
+    public Member findById(MemberId memberId) throws NoSuchElementException
     {
         final Member member = data.get(memberId);
 
         if (member == null)
         {
-            throw new RuntimeException("No member for " + memberId.getValue());
+            throw new NoSuchElementException("No member for " + memberId.getValue());
         }
         return member;
     }
