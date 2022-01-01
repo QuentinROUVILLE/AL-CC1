@@ -8,8 +8,8 @@ import static org.junit.Assert.assertEquals;
 public final class EmailTest {
     @Test
     public void testEmail() {
-        final EmailAddress email = EmailAddress.of("qrouville@gmail.com");
-        assertEquals(email.toString(), "qrouville@gmail.com");
+        final EmailAddress email = EmailAddress.of("rouvilleq@outlook.com");
+        assertEquals(email.toString(), "rouvilleq@outlook.com");
     }
 
     @Test(expected = IllegalArgumentException.class)
