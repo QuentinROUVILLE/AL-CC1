@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.infrastructure.memberRepository;
+package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberId;

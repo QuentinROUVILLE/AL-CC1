@@ -3,7 +3,7 @@ package fr.esgi.quentinrouville.use_case.member.application;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.memberRepository.InMemoryMemberRepository;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.InMemoryMemberRepository;
 
 import java.util.List;
 
