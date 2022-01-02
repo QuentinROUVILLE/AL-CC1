@@ -49,6 +49,6 @@ public final class InMemoryMemberRepository implements MemberRepository
     @Override
     public List<Member> findAll()
     {
-        return new ArrayList<>(data.values());
+        return List.copyOf(data.values());
     }
 }
