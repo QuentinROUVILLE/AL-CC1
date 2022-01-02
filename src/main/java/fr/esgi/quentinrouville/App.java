@@ -2,7 +2,7 @@ package fr.esgi.quentinrouville;
 
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
-import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
+import fr.esgi.quentinrouville.feature.RegisterMember;
 import fr.esgi.quentinrouville.use_case.member.infrastructure.CardExpirationDate;
 import fr.esgi.quentinrouville.use_case.member.infrastructure.CardNumber;
 import fr.esgi.quentinrouville.use_case.member.infrastructure.CardSecurityCode;
@@ -12,7 +12,7 @@ public final class App
 {
     public static void main( String[] args )
     {
-        RegisterService registerService = new RegisterService();
+        RegisterMember registerService = new RegisterMember();
         PaymentMethodService paymentMethodService = new PaymentMethodService();
 
         Member me = registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "Azerty123@");

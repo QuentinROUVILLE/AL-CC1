@@ -2,7 +2,6 @@ package fr.esgi.quentinrouville.feature;
 
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
-import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
 import fr.esgi.quentinrouville.use_case.member.infrastructure.CardExpirationDate;
 import fr.esgi.quentinrouville.use_case.member.infrastructure.CardNumber;
 import fr.esgi.quentinrouville.use_case.member.infrastructure.CardSecurityCode;
@@ -15,7 +14,7 @@ import static org.junit.Assert.*;
 
 public final class ProcessPaymentTest
 {
-    private final RegisterService registerService = new RegisterService();
+    private final RegisterMember registerService = new RegisterMember();
     private final PaymentMethodService paymentMethodService = new PaymentMethodService();
 
     @Test

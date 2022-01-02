@@ -1,5 +1,6 @@
 package fr.esgi.quentinrouville.use_case.member.application;
 
+import fr.esgi.quentinrouville.feature.VerifyMember;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
@@ -13,9 +14,9 @@ public final class MemberService
 
     public void create(Member member)
     {
-        VerifyMemberService verifyMemberService = new VerifyMemberService();
+        VerifyMember verifyMember = new VerifyMember();
 
-        if(verifyMemberService.isValid(member))
+        if(verifyMember.isValid(member))
         {
             System.out.println("The member " + member.getFirstName() + " " + member.getLastName() + " has been created.");
 
