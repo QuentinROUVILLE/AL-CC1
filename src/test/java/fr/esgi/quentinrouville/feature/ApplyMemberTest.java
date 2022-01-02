@@ -2,7 +2,6 @@ package fr.esgi.quentinrouville.feature;
 
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.application.MemberService;
-import fr.esgi.quentinrouville.use_case.member.application.RegisterService;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -10,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 public final class ApplyMemberTest
 {
     private final MemberService memberService = new MemberService();
-    private final RegisterService registerService = new RegisterService();
+    private final RegisterMember registerService = new RegisterMember();
 
     @Test
     public void ShouldCreateAMemberIfAllParametersAreProvided()

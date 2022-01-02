@@ -1,11 +1,12 @@
-package fr.esgi.quentinrouville.use_case.member.application;
+package fr.esgi.quentinrouville.feature;
 
+import fr.esgi.quentinrouville.use_case.member.application.MemberService;
 import fr.esgi.quentinrouville.use_case.member.domain.EmailAddress;
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
 import fr.esgi.quentinrouville.use_case.member.domain.Password;
 
-public final class RegisterService
+public final class RegisterMember
 {
     public Member register(String firstName, String lastName, String email, String password)
     {

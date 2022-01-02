@@ -1,6 +1,6 @@
 package fr.esgi.quentinrouville.use_case.member.domain;
 
-import fr.esgi.quentinrouville.use_case.member.application.VerifyMemberService;
+import fr.esgi.quentinrouville.feature.VerifyMember;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ public final class EmailAddress
 {
     private final String email;
 
-    private final VerifyMemberService verifyMemberService = new VerifyMemberService();
+    private final VerifyMember verifyMember = new VerifyMember();
 
     private EmailAddress(String email) {
         if(!emailIsValid(email)) {
@@ -23,7 +23,7 @@ public final class EmailAddress
 
     public boolean emailIsValid(String email) {
         return email.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
-                && !verifyMemberService.emailIsAlreadyTaken(email);
+                && !verifyMember.emailIsAlreadyTaken(email);
     }
 
     @Override
