@@ -3,9 +3,7 @@ package fr.esgi.quentinrouville.use_case.member.application;
 import fr.esgi.quentinrouville.kernel.CommandHandler;
 import fr.esgi.quentinrouville.kernel.Event;
 import fr.esgi.quentinrouville.kernel.EventDispatcher;
-import fr.esgi.quentinrouville.use_case.member.domain.Member;
-import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
-import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
+import fr.esgi.quentinrouville.use_case.member.domain.*;
 
 public class CreateMemberCommandHandler implements CommandHandler<CreateMember, MemberId> {
     private final MemberRepository memberRepository;
@@ -18,7 +16,13 @@ public class CreateMemberCommandHandler implements CommandHandler<CreateMember, 
 
     public MemberId handle(CreateMember createMember) {
         final MemberId memberId = memberRepository.nextIdentity();
-        Member member = Member.of(memberId, createMember.lastName, createMember.firstName, createMember.email, createMember.password);
+        Member member = Member.of(
+                memberId,
+                createMember.lastName,
+                createMember.firstName,
+                EmailAddress.of(createMember.email.emailAddress),
+                Password.of(createMember.password.password)
+        );
         memberRepository.save(member);
         eventEventDispatcher.dispatch(CreateMemberEvent.of(memberId));
         return memberId;
