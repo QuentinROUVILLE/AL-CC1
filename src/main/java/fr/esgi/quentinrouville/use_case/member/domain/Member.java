@@ -65,4 +65,8 @@ public final class Member
     public String getLastName() {
         return lastname;
     }
+
+    public void changePaymentMethod(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
 }
