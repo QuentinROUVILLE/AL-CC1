@@ -5,24 +5,26 @@ import java.util.Objects;
 public final class Member
 {
     private final MemberId memberId;
+    private final MemberType memberType;
     private final String lastname;
     private final String firstname;
     private final EmailAddress email;
     private final Password password;
     private PaymentMethod paymentMethod;
 
-    private Member(MemberId memberId, String lastname, String firstname, EmailAddress email, Password password)
+    private Member(MemberId memberId, MemberType memberType, String lastname, String firstname, EmailAddress email, Password password)
     {
         this.memberId = Objects.requireNonNull(memberId);
+        this.memberType = Objects.requireNonNull(memberType);
         this.lastname = Objects.requireNonNull(lastname);
         this.firstname = Objects.requireNonNull(firstname);
         this.email = Objects.requireNonNull(email);
         this.password = Objects.requireNonNull(password);
     }
 
-    public static Member of(MemberId memberId, String lastname, String firstname, EmailAddress email, Password password)
+    public static Member of(MemberId memberId, MemberType memberType, String lastname, String firstname, EmailAddress email, Password password)
     {
-        return new Member(memberId, lastname, firstname, email, password);
+        return new Member(memberId, memberType, lastname, firstname, email, password);
     }
 
     public MemberId getMemberId()
@@ -35,6 +37,7 @@ public final class Member
     {
         return "Member{" +
                 "memberId=" + memberId +
+                ", memberType=" + memberType +
                 ", lastname='" + lastname + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", email='" + email + '\'' +
