@@ -69,6 +69,22 @@ public final class Member
         return lastname;
     }
 
+    public MemberType getMemberType() {
+        return memberType;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public Password getPassword() {
+        return password;
+    }
+
     public void changePaymentMethod(PaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
     }

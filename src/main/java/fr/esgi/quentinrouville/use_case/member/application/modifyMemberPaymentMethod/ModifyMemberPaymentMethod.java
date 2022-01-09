@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.application;
+package fr.esgi.quentinrouville.use_case.member.application.modifyMemberPaymentMethod;
 
 import fr.esgi.quentinrouville.kernel.Command;
 import fr.esgi.quentinrouville.use_case.member.exposition.PaymentMethodDTO;

@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.application;
+package fr.esgi.quentinrouville.use_case.member.application.createMember;
 
 import fr.esgi.quentinrouville.kernel.CommandHandler;
 import fr.esgi.quentinrouville.kernel.Event;

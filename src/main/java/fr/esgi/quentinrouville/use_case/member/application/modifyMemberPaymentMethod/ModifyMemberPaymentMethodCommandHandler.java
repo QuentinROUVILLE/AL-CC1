@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.application;
+package fr.esgi.quentinrouville.use_case.member.application.modifyMemberPaymentMethod;
 
 import fr.esgi.quentinrouville.kernel.CommandHandler;
 import fr.esgi.quentinrouville.kernel.Event;
@@ -26,6 +26,7 @@ public final class ModifyMemberPaymentMethodCommandHandler implements CommandHan
         final Member member = memberRepository.findById(memberId);
         final PaymentMethod paymentMethod = (PaymentMethod) command.paymentMethod;
         member.changePaymentMethod(paymentMethod);
+        eventEventDispatcher.dispatch(ModifyMemberPaymentMethodEvent.of(memberId));
         return null;
     }
 }

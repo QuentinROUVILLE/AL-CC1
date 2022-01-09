@@ -1,4 +1,4 @@
-package fr.esgi.quentinrouville.use_case.member.application;
+package fr.esgi.quentinrouville.use_case.member.application.createMember;
 
 import fr.esgi.quentinrouville.kernel.ApplicationEvent;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberId;

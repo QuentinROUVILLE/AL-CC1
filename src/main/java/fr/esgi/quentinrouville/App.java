@@ -2,17 +2,16 @@ package fr.esgi.quentinrouville;
 
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.application.PaymentMethodService;
-import fr.esgi.quentinrouville.feature.RegisterMember;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.CardExpirationDate;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.CardNumber;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.CardSecurityCode;
-import fr.esgi.quentinrouville.use_case.member.infrastructure.CreditCardPayment;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardExpirationDate;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardNumber;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CardSecurityCode;
+import fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard.CreditCardPayment;
 
 public final class App
 {
     public static void main( String[] args )
     {
-        RegisterMember registerService = new RegisterMember();
+        /*RegisterMember registerService = new RegisterMember();
         PaymentMethodService paymentMethodService = new PaymentMethodService();
 
         Member me = registerService.register("Quentin", "ROUVILLE", "rouvilleq@gmail.com", "Azerty123@");
@@ -24,6 +23,6 @@ public final class App
                 "M QUENTIN ROUVILLE"
         ));
 
-        paymentMethodService.processPayment(me.getMemberId(), 49.99);
+        paymentMethodService.processPayment(me.getMemberId(), 49.99);*/
     }
 }

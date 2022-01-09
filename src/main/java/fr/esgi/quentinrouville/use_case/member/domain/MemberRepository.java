@@ -7,5 +7,7 @@ import java.util.NoSuchElementException;
 
 public interface MemberRepository extends Repository<MemberId, Member>
 {
+    Member findById(MemberId id) throws NoSuchElementException;
+
     List<Member> findAll();
 }
