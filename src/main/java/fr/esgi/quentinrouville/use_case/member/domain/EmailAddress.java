@@ -1,6 +1,7 @@
 package fr.esgi.quentinrouville.use_case.member.domain;
 
 import fr.esgi.quentinrouville.feature.VerifyMember;
+import fr.esgi.quentinrouville.use_case.error.infrastructure.EmailValidationException;
 
 import java.util.Objects;
 
@@ -12,7 +13,7 @@ public final class EmailAddress
 
     private EmailAddress(String email) {
         if(!emailIsValid(email)) {
-            throw new IllegalArgumentException("Invalid email address");
+            throw new EmailValidationException();
         }
         this.email = email;
     }

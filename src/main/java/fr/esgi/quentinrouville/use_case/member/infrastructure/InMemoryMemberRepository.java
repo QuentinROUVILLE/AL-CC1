@@ -1,5 +1,6 @@
 package fr.esgi.quentinrouville.use_case.member.infrastructure;
 
+import fr.esgi.quentinrouville.use_case.error.infrastructure.FindMemberException;
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
@@ -35,7 +36,7 @@ public final class InMemoryMemberRepository implements MemberRepository
 
         if (member == null)
         {
-            throw new NoSuchElementException("No member for " + memberId.getValue());
+            throw new FindMemberException(memberId.getValue());
         }
         return member;
     }

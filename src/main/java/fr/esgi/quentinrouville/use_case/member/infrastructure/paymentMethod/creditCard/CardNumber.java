@@ -1,5 +1,7 @@
 package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
 
+import fr.esgi.quentinrouville.use_case.error.infrastructure.CardNumberValidationException;
+
 import java.util.Objects;
 
 public final class CardNumber
@@ -9,7 +11,7 @@ public final class CardNumber
     private CardNumber(String number)
     {
         if(!numberIsValid(number)){
-            throw new IllegalArgumentException("Invalid card number");
+            throw new CardNumberValidationException();
         }
         this.number = number;
     }

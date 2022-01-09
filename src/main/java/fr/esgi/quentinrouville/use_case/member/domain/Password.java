@@ -1,5 +1,7 @@
 package fr.esgi.quentinrouville.use_case.member.domain;
 
+import fr.esgi.quentinrouville.use_case.error.infrastructure.PasswordValidationException;
+
 import java.util.Objects;
 
 public final class Password
@@ -8,7 +10,7 @@ public final class Password
 
     private Password(String password) {
         if(!passwordIsValid(password)) {
-            throw new IllegalArgumentException("Password is not valid");
+            throw new PasswordValidationException();
         }
         this.password = password;
     }

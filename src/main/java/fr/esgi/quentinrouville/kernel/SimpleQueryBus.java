@@ -1,5 +1,7 @@
 package fr.esgi.quentinrouville.kernel;
 
+import fr.esgi.quentinrouville.use_case.error.infrastructure.SimpleQueryBusSendingException;
+
 import java.util.Map;
 
 public class SimpleQueryBus implements QueryBus {
@@ -15,7 +17,7 @@ public class SimpleQueryBus implements QueryBus {
 
         final QueryHandler queryHandler = dataMap.get(query.getClass());
         if (queryHandler == null) {
-            throw new RuntimeException("No such query handler for " + query.getClass().getName());
+            throw new SimpleQueryBusSendingException(query.getClass().getName());
         }
 
         return (R) queryHandler.handle(query);

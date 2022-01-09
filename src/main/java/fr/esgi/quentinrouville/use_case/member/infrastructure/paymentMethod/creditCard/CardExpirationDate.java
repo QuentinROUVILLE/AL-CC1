@@ -1,5 +1,6 @@
 package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
 
+import fr.esgi.quentinrouville.use_case.error.infrastructure.ExpirationDateValidationException;
 import fr.esgi.quentinrouville.use_case.member.application.DateService;
 
 import java.time.LocalDate;
@@ -13,7 +14,7 @@ public final class CardExpirationDate
 
     private CardExpirationDate(LocalDate expirationDate) {
         if(!expirationDateIsValid(expirationDate)) {
-            throw new IllegalArgumentException("Expiration date is not valid");
+            throw new ExpirationDateValidationException();
         }
         this.expirationDate = expirationDate;
     }

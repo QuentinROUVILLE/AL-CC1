@@ -1,5 +1,7 @@
 package fr.esgi.quentinrouville.use_case.member.infrastructure.paymentMethod.creditCard;
 
+import fr.esgi.quentinrouville.use_case.error.infrastructure.SecurityCodeValidationException;
+
 import java.util.Objects;
 
 public final class CardSecurityCode {
@@ -7,7 +9,7 @@ public final class CardSecurityCode {
 
     private CardSecurityCode(String securityCode) {
         if(!securityCodeIsValid(securityCode)) {
-            throw new IllegalArgumentException("Invalid security code");
+            throw new SecurityCodeValidationException();
         }
         this.securityCode = securityCode;
     }

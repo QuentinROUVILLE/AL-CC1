@@ -1,6 +1,7 @@
 package fr.esgi.quentinrouville.use_case.member.application;
 
 import fr.esgi.quentinrouville.feature.VerifyMember;
+import fr.esgi.quentinrouville.use_case.error.infrastructure.MemberValidationException;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
@@ -16,16 +17,12 @@ public final class MemberService
     {
         VerifyMember verifyMember = new VerifyMember();
 
-        if(verifyMember.isValid(member))
+        if(!verifyMember.isValid(member))
         {
-            System.out.println("The member " + member.getFirstName() + " " + member.getLastName() + " has been created.");
+            throw new MemberValidationException();
+        }
 
-            this.memberRepository.save(member);
-        }
-        else
-        {
-            throw new IllegalArgumentException("Member mustn't be null.");
-        }
+        this.memberRepository.save(member);
     }
 
     public MemberId nextIdentity()
