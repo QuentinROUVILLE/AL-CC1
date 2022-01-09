@@ -4,7 +4,6 @@ import fr.esgi.quentinrouville.kernel.CommandHandler;
 import fr.esgi.quentinrouville.kernel.Event;
 import fr.esgi.quentinrouville.kernel.EventDispatcher;
 import fr.esgi.quentinrouville.use_case.member.domain.Member;
-import fr.esgi.quentinrouville.use_case.member.domain.MemberId;
 import fr.esgi.quentinrouville.use_case.member.domain.MemberRepository;
 import fr.esgi.quentinrouville.use_case.member.domain.PaymentMethod;
 
@@ -22,11 +21,10 @@ public final class ModifyMemberPaymentMethodCommandHandler implements CommandHan
     }
 
     public Void handle(ModifyMemberPaymentMethod command) {
-        final MemberId memberId = MemberId.of(command.memberId);
-        final Member member = memberRepository.findById(memberId);
-        final PaymentMethod paymentMethod = (PaymentMethod) command.paymentMethod;
+        final Member member = memberRepository.findById(command.memberId);
+        final PaymentMethod paymentMethod = command.paymentMethod.paymentMethod;
         member.changePaymentMethod(paymentMethod);
-        eventEventDispatcher.dispatch(ModifyMemberPaymentMethodEvent.of(memberId));
+        eventEventDispatcher.dispatch(ModifyMemberPaymentMethodEvent.of(command.memberId));
         return null;
     }
 }
