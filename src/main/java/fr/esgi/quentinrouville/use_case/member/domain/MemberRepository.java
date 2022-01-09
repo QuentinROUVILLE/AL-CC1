@@ -1,15 +1,11 @@
 package fr.esgi.quentinrouville.use_case.member.domain;
 
+import fr.esgi.quentinrouville.kernel.Repository;
+
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public interface MemberRepository
+public interface MemberRepository extends Repository<MemberId, Member>
 {
-    void save(Member member);
-
-    Member findById(MemberId memberId);
-
-    MemberId nextIdentity() throws NoSuchElementException;
-
     List<Member> findAll();
 }
